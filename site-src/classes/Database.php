@@ -5,7 +5,7 @@
  * Database class file.
  */
 
-namespace PAWeb;
+namespace APP;
 
 use PDO;
 

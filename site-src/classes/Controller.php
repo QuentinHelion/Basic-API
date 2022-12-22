@@ -7,9 +7,9 @@
 
 declare(strict_types=1);
 
-namespace PAWeb;
+namespace APP;
 
-use PAWeb\Models\UserModel;
+use APP\Models\UserModel;
 
 abstract class Controller
 {
@@ -26,10 +26,10 @@ abstract class Controller
             $tpl_engine->assign($key, $value);
         }
 
-        $model = new UserModel();
-        session_start();
-        $res = !empty($_SESSION["id"]) ? $model->fetchOne($_SESSION["id"]) : null;
-        $tpl_engine->assign("perms", $res["perms"]);
+        // $model = new UserModel();
+        // session_start();
+        // $res = !empty($_SESSION["id"]) ? $model->fetchOne($_SESSION["id"]) : null;
+        // $tpl_engine->assign("perms", $res["perms"]);
 
         $tpl_engine->display($template);
     }
