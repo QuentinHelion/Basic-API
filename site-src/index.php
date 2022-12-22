@@ -10,6 +10,8 @@ $route = $_REQUEST["route"] ?? "";
 $method = $_SERVER["REQUEST_METHOD"];
 
 if (preg_match("/^api/", $route)) {
+
+    $controller = new PAWeb\API();
     // $controller = new PAWeb\ReportInterface();
     //
     // if (preg_match("/(\/)/", $route)) {
