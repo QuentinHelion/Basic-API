@@ -13,6 +13,12 @@ $method = $_SERVER["REQUEST_METHOD"];
 if (preg_match("/^api/", $route)) {
 
     $controller = new APP\Controllers\API();
+
+    if ($method == "POST") {
+        $controller->post();
+        die();
+    }
+
     // $controller = new PAWeb\ReportInterface();
     //
     // if (preg_match("/(\/)/", $route)) {

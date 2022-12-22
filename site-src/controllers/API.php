@@ -23,8 +23,8 @@ class API extends Controller
 
     public function post()
     {
-        $body = $_POST;
-        header("X-Powered-By: EasyScooter");
+        $body = $_GET;
+        header("X-Powered-By: APP Java API");
         header("Content-Type: application/api");
         if (empty($body["value"])) {
             http_response_code(412);
