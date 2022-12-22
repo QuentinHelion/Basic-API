@@ -1,6 +1,6 @@
 <?php
 
-namespace PAWeb\Models;
+namespace APP\Models;
 
 class APIModel extends Model
 {

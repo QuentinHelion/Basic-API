@@ -7,10 +7,10 @@
 
 declare(strict_types=1);
 
-namespace PAWeb\Models;
+namespace APP\Models;
 
 use PDO;
-use PAWeb\Database;
+use APP\Database;
 
 abstract class Model
 {

@@ -7,11 +7,12 @@
 
 declare(strict_types=1);
 
-namespace PAWeb\Controllers;
+namespace APP\Controllers;
 
-use PAWeb\Controller;
+use APP\Controller;
+use APP\Models\APIModel;
 
-class Reports extends Controller
+class API extends Controller
 {
     private APIModel $model;
 
