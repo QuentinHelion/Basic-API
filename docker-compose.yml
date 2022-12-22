@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+    env_file: .env
+    image: app-java-api
+    ports:
+      - "80:80"
+    depends_on:
+      - database
+    volumes:
+      - ./site-src:/var/www/html
+
+
+  database:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: app-java-api
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - mysql-data:/var/lib/mysql
+
+
+volumes:
+  mysql-data:
+    driver: local
