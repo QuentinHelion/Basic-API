@@ -1,7 +1,7 @@
 FROM php:7.4-apache
 WORKDIR /var/www/
 
-COPY site-src/* ./html/
+COPY src/* ./html/
 
 COPY app.conf /etc/apache2/sites-available/app.conf
 

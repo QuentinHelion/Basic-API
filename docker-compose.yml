@@ -11,7 +11,7 @@ services:
     depends_on:
       - database
     volumes:
-      - ./site-src:/var/www/html
+      - ./src:/var/www/html
 
 
   database:
